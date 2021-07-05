@@ -75,7 +75,7 @@ class _TwitterProfilePageState extends State<TwitterProfilePage> {
                               fit: BoxFit.cover,
                               alignment: Alignment.bottomCenter,
                               image:
-                                  AssetImage('assets/twitter_flutter_bg.png'),
+                                  AssetImage('assets/twitter_profile/twitter_flutter_bg.png'),
                             )
                           : null,
                     ),

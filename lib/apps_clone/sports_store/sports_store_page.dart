@@ -183,7 +183,7 @@ class _SportsStorePageState extends State<SportsStorePage> {
             contentPadding: EdgeInsets.zero,
             leading: CircleAvatar(
               backgroundColor: Colors.grey,
-              backgroundImage: AssetImage('assets/mesi.png'),
+              backgroundImage: AssetImage('assets/messi.png'),
             ),
             title: Text(
               'Lionel Messi',
