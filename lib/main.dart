@@ -8,6 +8,7 @@ import 'package:flutter_samples/communication_widgets/main_communication_widgets
 import 'package:flutter_samples/confetti/confetti_page.dart';
 import 'package:flutter_samples/fab_range/fab_range_page.dart';
 import 'package:flutter_samples/hero_animations/main_hero_animations.dart';
+import 'package:flutter_samples/image_transformer/image_transformer_page.dart';
 import 'package:flutter_samples/menu_navigations/main_menu_navigations.dart';
 import 'package:flutter_samples/page_transition/page_transition_page.dart';
 import 'package:flutter_samples/parallax/parallax_page.dart';
@@ -116,6 +117,10 @@ class _MyAppState extends State<MyApp> {
             MyMenuButton(
               title: "Tinder Carousel",
               onTap: () => _onButtonTap(TinderCarouselPage()),
+            ),
+            MyMenuButton(
+              title: "Image Transformer",
+              onTap: () => _onButtonTap(ImageTransformerPage()),
             ),
           ],
         ),
