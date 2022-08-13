@@ -16,6 +16,7 @@ import 'package:flutter_samples/screens/screens_page.dart';
 import 'package:flutter_samples/scroll_controller/main_scroll_controller.dart';
 import 'package:flutter_samples/size_and_position/main_size_and_position.dart';
 import 'package:flutter_samples/split_image/main_split_image.dart';
+import 'package:flutter_samples/tinder_carousel/tinder_carousel_page.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -111,6 +112,10 @@ class _MyAppState extends State<MyApp> {
             MyMenuButton(
               title: "Page Transition",
               onTap: () => _onButtonTap(PageTransitionPage()),
+            ),
+            MyMenuButton(
+              title: "Tinder Carousel",
+              onTap: () => _onButtonTap(TinderCarouselPage()),
             ),
           ],
         ),
