@@ -52,7 +52,7 @@ class _HeaderNavigationState extends State<HeaderNavigation> {
 
   @override
   void initState() {
-    WidgetsBinding.instance!.addPersistentFrameCallback((_) {
+    WidgetsBinding.instance.addPersistentFrameCallback((_) {
       setState(
         () => _heightLayout =
             (_keyLayout.currentContext!.findRenderObject() as RenderBox)

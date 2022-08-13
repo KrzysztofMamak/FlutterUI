@@ -47,7 +47,7 @@ class _MoviesConceptPageState extends State<MoviesConceptPage> {
   @override
   void initState() {
     _pageController = PageController(viewportFraction: 0.7);
-    WidgetsBinding.instance?.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       _pageController.addListener(_listener);
     });
     super.initState();

@@ -53,7 +53,7 @@ class _MainSizeAndPositionState extends State<MainSizeAndPosition> {
 
   @override
   void initState() {
-    WidgetsBinding.instance?.addPostFrameCallback(_afterLayout);
+    WidgetsBinding.instance.addPostFrameCallback(_afterLayout);
     super.initState();
   }
 

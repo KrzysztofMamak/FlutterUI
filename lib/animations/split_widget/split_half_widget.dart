@@ -56,7 +56,7 @@ class _SplitHalfWidgetState extends State<SplitHalfWidget>
   void initState() {
     _controller =
         AnimationController(vsync: this, duration: Duration(seconds: 1));
-    WidgetsBinding.instance!.addPostFrameCallback(_onLayoutDone);
+    WidgetsBinding.instance.addPostFrameCallback(_onLayoutDone);
     super.initState();
   }
 

@@ -54,7 +54,7 @@ class _SplitDiagonalWidgetState extends State<SplitDiagonalWidget>
       duration: Duration(seconds: 1),
     );
 
-    WidgetsBinding.instance!.addPostFrameCallback(_onLayoutDone);
+    WidgetsBinding.instance.addPostFrameCallback(_onLayoutDone);
     super.initState();
   }
 

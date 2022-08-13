@@ -84,7 +84,7 @@ class _PhotoConceptPageState extends State<PhotoConceptPage> {
   @override
   void initState() {
     _scrollControllerMain = ScrollController();
-    WidgetsBinding.instance?.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       setState(() {
         _heightStack =
             (_keyStack.currentContext?.findRenderObject() as RenderBox)

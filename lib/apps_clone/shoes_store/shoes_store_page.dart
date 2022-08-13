@@ -295,7 +295,7 @@ class _ShoesStorePageState extends State<ShoesStorePage> {
   @override
   void initState() {
     _pageController = PageController(viewportFraction: 0.78);
-    WidgetsBinding.instance?.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       _pageController.addListener(_listener);
     });
     super.initState();

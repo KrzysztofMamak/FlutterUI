@@ -205,7 +205,7 @@ class _SportsStorePageState extends State<SportsStorePage> {
   @override
   void initState() {
     lastPrice = balls.first.price;
-    WidgetsBinding.instance?.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       _pageController.addListener(_listener);
     });
     super.initState();
