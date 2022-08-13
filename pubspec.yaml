@@ -19,6 +19,7 @@ dependencies:
   confetti: ^0.7.0
   page_transition: ^2.0.9
   provider: ^6.0.3
+  fluttertoast: ^8.0.9
 
 dev_dependencies:
   flutter_test:
