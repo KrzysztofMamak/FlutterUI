@@ -5,6 +5,7 @@ import 'package:flutter_samples/appbar_sliverappbar/main_appbar_sliverappbar.dar
 import 'package:flutter_samples/apps_clone/main_apps_clone.dart';
 import 'package:flutter_samples/collapsing_toolbar/main_collapsing_toolbar.dart';
 import 'package:flutter_samples/communication_widgets/main_communication_widgets.dart';
+import 'package:flutter_samples/fab_range/fab_range_page.dart';
 import 'package:flutter_samples/hero_animations/main_hero_animations.dart';
 import 'package:flutter_samples/menu_navigations/main_menu_navigations.dart';
 import 'package:flutter_samples/persistent_tab_bar/main_persistent_tab_bar.dart';
@@ -91,6 +92,10 @@ class _MyAppState extends State<MyApp> {
             MyMenuButton(
               title: "Screens",
               onTap: () => _onButtonTap(ScreensPage()),
+            ),
+            MyMenuButton(
+              title: "FabRange",
+              onTap: () => _onButtonTap(FabRangePage()),
             ),
           ],
         ),
