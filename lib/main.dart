@@ -9,6 +9,7 @@ import 'package:flutter_samples/confetti/confetti_page.dart';
 import 'package:flutter_samples/fab_range/fab_range_page.dart';
 import 'package:flutter_samples/hero_animations/main_hero_animations.dart';
 import 'package:flutter_samples/menu_navigations/main_menu_navigations.dart';
+import 'package:flutter_samples/parallax/parallax_page.dart';
 import 'package:flutter_samples/persistent_tab_bar/main_persistent_tab_bar.dart';
 import 'package:flutter_samples/screens/screens_page.dart';
 import 'package:flutter_samples/scroll_controller/main_scroll_controller.dart';
@@ -101,6 +102,10 @@ class _MyAppState extends State<MyApp> {
             MyMenuButton(
               title: "Confetti",
               onTap: () => _onButtonTap(ConfettiPage()),
+            ),
+            MyMenuButton(
+              title: "Parallax",
+              onTap: () => _onButtonTap(ParallaxPage()),
             ),
           ],
         ),
