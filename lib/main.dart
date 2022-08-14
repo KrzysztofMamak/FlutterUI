@@ -22,6 +22,7 @@ import 'package:flutter_samples/rotate_widget/rotate_widget_page.dart';
 import 'package:flutter_samples/screens/screens_page.dart';
 import 'package:flutter_samples/scroll_controller/main_scroll_controller.dart';
 import 'package:flutter_samples/size_and_position/main_size_and_position.dart';
+import 'package:flutter_samples/speed_dial/speed_dial_page.dart';
 import 'package:flutter_samples/split_image/main_split_image.dart';
 import 'package:flutter_samples/tinder_carousel/tinder_carousel_page.dart';
 
@@ -151,6 +152,10 @@ class _MyAppState extends State<MyApp> {
             MyMenuButton(
               title: "Hidden Bar and Fab",
               onTap: () => _onButtonTap(HiddenBarAndFabPage()),
+            ),
+            MyMenuButton(
+              title: "Speed Dial",
+              onTap: () => _onButtonTap(SpeedDialPage()),
             ),
           ],
         ),
