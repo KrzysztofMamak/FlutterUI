@@ -27,6 +27,7 @@ import 'package:flutter_samples/scroll_controller/main_scroll_controller.dart';
 import 'package:flutter_samples/size_and_position/main_size_and_position.dart';
 import 'package:flutter_samples/speed_dial/speed_dial_page.dart';
 import 'package:flutter_samples/split_image/main_split_image.dart';
+import 'package:flutter_samples/text_slide/text_slide_page.dart';
 import 'package:flutter_samples/tinder_carousel/tinder_carousel_page.dart';
 
 void main() {
@@ -171,6 +172,10 @@ class _MyAppState extends State<MyApp> {
             MyMenuButton(
               title: "Amazing Sidebar",
               onTap: () => _onButtonTap(AmazingSidebarPage()),
+            ),
+            MyMenuButton(
+              title: "Text Slide",
+              onTap: () => _onButtonTap(TextSlidePage()),
             ),
           ],
         ),
