@@ -37,6 +37,7 @@ flutter:
     - assets/credit_cards/
     - assets/hotel_booking/
     - assets/fitness_app/
+    - assets/flipping_card/
 
   fonts:
     - family: WorkSansSemiBold

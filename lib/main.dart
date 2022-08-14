@@ -8,6 +8,8 @@ import 'package:flutter_samples/communication_widgets/main_communication_widgets
 import 'package:flutter_samples/confetti/confetti_page.dart';
 import 'package:flutter_samples/double_tap_image/double_tap_image_page.dart';
 import 'package:flutter_samples/fab_range/fab_range_page.dart';
+import 'package:flutter_samples/flipping_card/flipping_card_page.dart';
+import 'package:flutter_samples/flipping_card_2/flipping_card_2_page.dart';
 import 'package:flutter_samples/hero_animations/main_hero_animations.dart';
 import 'package:flutter_samples/image_transformer/image_transformer_page.dart';
 import 'package:flutter_samples/menu_navigations/main_menu_navigations.dart';
@@ -126,6 +128,14 @@ class _MyAppState extends State<MyApp> {
             MyMenuButton(
               title: "Double Tap Image",
               onTap: () => _onButtonTap(DoubleTapImagePage()),
+            ),
+            MyMenuButton(
+              title: "Flipping Card",
+              onTap: () => _onButtonTap(FlippingCardPage()),
+            ),
+            MyMenuButton(
+              title: "Flipping Card 2",
+              onTap: () => _onButtonTap(FlippingCard2Page()),
             ),
           ],
         ),
