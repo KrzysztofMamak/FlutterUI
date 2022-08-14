@@ -23,6 +23,7 @@ dependencies:
   curved_navigation_bar: ^1.0.3
   flutter_speed_dial: ^6.0.0
   flutter_zoom_drawer: ^3.0.3
+  marquee: ^2.2.3
 
 dev_dependencies:
   flutter_test:
