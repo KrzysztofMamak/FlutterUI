@@ -6,6 +6,7 @@ import 'package:flutter_samples/apps_clone/main_apps_clone.dart';
 import 'package:flutter_samples/collapsing_toolbar/main_collapsing_toolbar.dart';
 import 'package:flutter_samples/communication_widgets/main_communication_widgets.dart';
 import 'package:flutter_samples/confetti/confetti_page.dart';
+import 'package:flutter_samples/curved_navigation/curved_navigation_page.dart';
 import 'package:flutter_samples/double_tap_image/double_tap_image_page.dart';
 import 'package:flutter_samples/fab_range/fab_range_page.dart';
 import 'package:flutter_samples/flipping_card/flipping_card_page.dart';
@@ -141,6 +142,10 @@ class _MyAppState extends State<MyApp> {
             MyMenuButton(
               title: "Rotate Widget",
               onTap: () => _onButtonTap(RotateWidgetPage()),
+            ),
+            MyMenuButton(
+              title: "Curved Navigation",
+              onTap: () => _onButtonTap(CurvedNavigationPage()),
             ),
           ],
         ),
