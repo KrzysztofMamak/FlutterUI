@@ -18,6 +18,7 @@ import 'package:flutter_samples/hero_animations/main_hero_animations.dart';
 import 'package:flutter_samples/hidden_bar_and_fab/hidden_bar_and_fab_page.dart';
 import 'package:flutter_samples/hide_bottom_nav_bar/hide_bottom_nav_bar_page.dart';
 import 'package:flutter_samples/image_transformer/image_transformer_page.dart';
+import 'package:flutter_samples/instagram_like_animation/instagram_like_animation_page.dart';
 import 'package:flutter_samples/menu_navigations/main_menu_navigations.dart';
 import 'package:flutter_samples/page_transition/page_transition_page.dart';
 import 'package:flutter_samples/parallax/parallax_page.dart';
@@ -181,6 +182,10 @@ class _MyAppState extends State<MyApp> {
             MyMenuButton(
               title: "Hide Bottom Nav Bar",
               onTap: () => _onButtonTap(HideBottomNavBarPage()),
+            ),
+            MyMenuButton(
+              title: "Instagram Like Animation",
+              onTap: () => _onButtonTap(InstagramLikeAnimationPage()),
             ),
           ],
         ),
