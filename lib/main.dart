@@ -29,6 +29,7 @@ import 'package:flutter_samples/scroll_controller/main_scroll_controller.dart';
 import 'package:flutter_samples/size_and_position/main_size_and_position.dart';
 import 'package:flutter_samples/speed_dial/speed_dial_page.dart';
 import 'package:flutter_samples/split_image/main_split_image.dart';
+import 'package:flutter_samples/stop_watch_timer/stop_watch_timer_page.dart';
 import 'package:flutter_samples/text_slide/text_slide_page.dart';
 import 'package:flutter_samples/tinder_carousel/tinder_carousel_page.dart';
 
@@ -186,6 +187,10 @@ class _MyAppState extends State<MyApp> {
             MyMenuButton(
               title: "Instagram Like Animation",
               onTap: () => _onButtonTap(InstagramLikeAnimationPage()),
+            ),
+            MyMenuButton(
+              title: "Stop Watch Timer",
+              onTap: () => _onButtonTap(StopWatchTimerPage()),
             ),
           ],
         ),
