@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_samples/amazing_hero_animations/amazing_hero_animations_page.dart';
@@ -9,6 +10,7 @@ import 'package:flutter_samples/awaiting_button/awaiting_button_page.dart';
 import 'package:flutter_samples/collapsing_toolbar/main_collapsing_toolbar.dart';
 import 'package:flutter_samples/communication_widgets/main_communication_widgets.dart';
 import 'package:flutter_samples/confetti/confetti_page.dart';
+import 'package:flutter_samples/countdown_timer/countdown_timer_page.dart';
 import 'package:flutter_samples/curved_navigation/curved_navigation_page.dart';
 import 'package:flutter_samples/double_tap_image/double_tap_image_page.dart';
 import 'package:flutter_samples/fab_range/fab_range_page.dart';
@@ -191,6 +193,10 @@ class _MyAppState extends State<MyApp> {
             MyMenuButton(
               title: "Stop Watch Timer",
               onTap: () => _onButtonTap(StopWatchTimerPage()),
+            ),
+            MyMenuButton(
+              title: "Countdown Timer",
+              onTap: () => _onButtonTap(CountdownTimerPage()),
             ),
           ],
         ),
