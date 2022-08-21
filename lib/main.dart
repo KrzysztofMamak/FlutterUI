@@ -34,6 +34,7 @@ import 'package:flutter_samples/split_image/main_split_image.dart';
 import 'package:flutter_samples/stop_watch_timer/stop_watch_timer_page.dart';
 import 'package:flutter_samples/text_slide/text_slide_page.dart';
 import 'package:flutter_samples/tinder_carousel/tinder_carousel_page.dart';
+import 'package:flutter_samples/transition_animations/transition_animations_page.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -197,6 +198,10 @@ class _MyAppState extends State<MyApp> {
             MyMenuButton(
               title: "Countdown Timer",
               onTap: () => _onButtonTap(CountdownTimerPage()),
+            ),
+            MyMenuButton(
+              title: "Transition Animations",
+              onTap: () => _onButtonTap(TransitionAnimationsPage()),
             ),
           ],
         ),
