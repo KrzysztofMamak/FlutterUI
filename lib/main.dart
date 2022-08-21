@@ -19,6 +19,7 @@ import 'package:flutter_samples/flipping_card_2/flipping_card_2_page.dart';
 import 'package:flutter_samples/hero_animations/main_hero_animations.dart';
 import 'package:flutter_samples/hidden_bar_and_fab/hidden_bar_and_fab_page.dart';
 import 'package:flutter_samples/hide_bottom_nav_bar/hide_bottom_nav_bar_page.dart';
+import 'package:flutter_samples/hover_effects/hover_effects_page.dart';
 import 'package:flutter_samples/image_transformer/image_transformer_page.dart';
 import 'package:flutter_samples/instagram_like_animation/instagram_like_animation_page.dart';
 import 'package:flutter_samples/menu_navigations/main_menu_navigations.dart';
@@ -202,6 +203,11 @@ class _MyAppState extends State<MyApp> {
             MyMenuButton(
               title: "Transition Animations",
               onTap: () => _onButtonTap(TransitionAnimationsPage()),
+            ),
+            // Only web
+            MyMenuButton(
+              title: "Hover Effects",
+              onTap: () => _onButtonTap(HoverEffectsPage()),
             ),
           ],
         ),
