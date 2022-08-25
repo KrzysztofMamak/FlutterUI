@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_samples/hidden_drawer/hidden_drawer_item.dart';
 import 'package:flutter_samples/hidden_drawer/hidden_drawer_items.dart';
 
 class HiddenDrawer extends StatelessWidget {
-  const HiddenDrawer({Key? key}) : super(key: key);
+  const HiddenDrawer({
+    Key? key,
+    required this.onItemSelected,
+  }) : super(key: key);
 
-  Widget _buildDrawerItems() {
+  final ValueChanged<HiddenDrawerItem> onItemSelected;
+
+  Widget _buildDrawerItems(BuildContext context) {
     return Column(
       children: HiddenDrawerItems.all
           .map(
@@ -18,10 +24,10 @@ class HiddenDrawer extends StatelessWidget {
                 item.title,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 24,
+                  fontSize: 16,
                 ),
               ),
-              onTap: () {},
+              onTap: () => onItemSelected(item),
             ),
           )
           .toList(),
@@ -30,11 +36,14 @@ class HiddenDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          _buildDrawerItems(),
-        ],
+    return Container(
+      padding: const EdgeInsets.fromLTRB(16, 32, 16, 0),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            _buildDrawerItems(context),
+          ],
+        ),
       ),
     );
   }
