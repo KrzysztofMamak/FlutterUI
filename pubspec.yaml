@@ -10,12 +10,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cached_network_image: ^3.0.0-nullsafety
-  font_awesome_flutter: ^9.0.0-nullsafety
-  intl: ^0.17.0-nullsafety.2
-  shimmer: ^2.0.0-nullsafety.0
-  audioplayers: ^0.18.3
-  cupertino_icons: ^1.0.2
+  cached_network_image: ^3.2.1
+  font_awesome_flutter: ^10.1.0
+  intl: ^0.17.0
+  shimmer: ^2.0.0
+  audioplayers: ^1.0.1
+  cupertino_icons: ^1.0.5
   confetti: ^0.7.0
   page_transition: ^2.0.9
   provider: ^6.0.3
