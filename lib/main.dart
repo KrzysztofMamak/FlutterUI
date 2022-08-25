@@ -30,6 +30,7 @@ import 'package:flutter_samples/persistent_tab_bar/main_persistent_tab_bar.dart'
 import 'package:flutter_samples/rotate_widget/rotate_widget_page.dart';
 import 'package:flutter_samples/screens/screens_page.dart';
 import 'package:flutter_samples/scroll_controller/main_scroll_controller.dart';
+import 'package:flutter_samples/shimmer_effect/shimmer_effect_page.dart';
 import 'package:flutter_samples/size_and_position/main_size_and_position.dart';
 import 'package:flutter_samples/speed_dial/speed_dial_page.dart';
 import 'package:flutter_samples/split_image/main_split_image.dart';
@@ -213,6 +214,10 @@ class _MyAppState extends State<MyApp> {
             MyMenuButton(
               title: "Hidden Drawer",
               onTap: () => _onButtonTap(HiddenDrawerPage()),
+            ),
+            MyMenuButton(
+              title: "Shimmer Effect",
+              onTap: () => _onButtonTap(ShimmerEffectPage()),
             ),
           ],
         ),
