@@ -1,6 +1,5 @@
 import 'dart:math';
 
-import 'package:audioplayers/audio_cache.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
@@ -28,7 +27,9 @@ class _ChristmasTreePageState extends State<ChristmasTreePage> {
   }
 
   void _playMusic() async {
-    _audioPlayer = await _audioCache.loop('jingle.mp3');
+    // TODO -> adjust to the newest audioplayers version
+    // _audioPlayer = AudioPlayer();
+    // _audioPlayer = await _audioCache('jingle.mp3');
   }
 
   void _resumePlaying() {
