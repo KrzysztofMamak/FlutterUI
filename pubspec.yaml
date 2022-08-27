@@ -25,6 +25,7 @@ dependencies:
   flutter_zoom_drawer: ^3.0.3
   marquee: ^2.2.3
   sprung: ^3.0.1
+  image_picker: ^0.8.5+3
 
 dev_dependencies:
   flutter_test:
