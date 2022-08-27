@@ -24,6 +24,7 @@ import 'package:flutter_samples/hide_bottom_nav_bar/hide_bottom_nav_bar_page.dar
 import 'package:flutter_samples/hover_effects/hover_effects_page.dart';
 import 'package:flutter_samples/image_transformer/image_transformer_page.dart';
 import 'package:flutter_samples/instagram_like_animation/instagram_like_animation_page.dart';
+import 'package:flutter_samples/jigsaw_puzzle/jigsaw_puzzle_page.dart';
 import 'package:flutter_samples/menu_navigations/main_menu_navigations.dart';
 import 'package:flutter_samples/page_transition/page_transition_page.dart';
 import 'package:flutter_samples/parallax/parallax_page.dart';
@@ -228,6 +229,10 @@ class _MyAppState extends State<MyApp> {
             MyMenuButton(
               title: "Turn on the blur",
               onTap: () => _onButtonTap(TurnOnTheBlurPage()),
+            ),
+            MyMenuButton(
+              title: "Jigsaw Puzzle",
+              onTap: () => _onButtonTap(JigsawPuzzlePage()),
             ),
           ],
         ),
