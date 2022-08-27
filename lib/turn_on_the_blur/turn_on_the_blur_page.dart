@@ -27,7 +27,7 @@ class _TurnOnTheBlurPageState extends State<TurnOnTheBlurPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Turn on the light'),
+        title: Text('Turn on the blur'),
       ),
       body: GestureDetector(
         onPanStart: (val) => _onPanUpdate(val.localPosition),
