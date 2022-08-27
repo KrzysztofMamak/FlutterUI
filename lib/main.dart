@@ -39,6 +39,7 @@ import 'package:flutter_samples/stop_watch_timer/stop_watch_timer_page.dart';
 import 'package:flutter_samples/text_slide/text_slide_page.dart';
 import 'package:flutter_samples/tinder_carousel/tinder_carousel_page.dart';
 import 'package:flutter_samples/transition_animations/transition_animations_page.dart';
+import 'package:flutter_samples/turn_on_the_blur/turn_on_the_blur_page.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -223,6 +224,10 @@ class _MyAppState extends State<MyApp> {
             MyMenuButton(
               title: "Animated List",
               onTap: () => _onButtonTap(AnimatedListPage()),
+            ),
+            MyMenuButton(
+              title: "Turn on the blur",
+              onTap: () => _onButtonTap(TurnOnTheBlurPage()),
             ),
           ],
         ),
