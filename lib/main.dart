@@ -8,6 +8,7 @@ import 'package:flutter_samples/animations/main_animations.dart';
 import 'package:flutter_samples/appbar_sliverappbar/main_appbar_sliverappbar.dart';
 import 'package:flutter_samples/apps_clone/main_apps_clone.dart';
 import 'package:flutter_samples/awaiting_button/awaiting_button_page.dart';
+import 'package:flutter_samples/bouncing_cards/bouncing_cards_page.dart';
 import 'package:flutter_samples/collapsing_toolbar/main_collapsing_toolbar.dart';
 import 'package:flutter_samples/communication_widgets/main_communication_widgets.dart';
 import 'package:flutter_samples/confetti/confetti_page.dart';
@@ -233,6 +234,10 @@ class _MyAppState extends State<MyApp> {
             MyMenuButton(
               title: "Jigsaw Puzzle",
               onTap: () => _onButtonTap(JigsawPuzzlePage()),
+            ),
+            MyMenuButton(
+              title: "Bouncing cards",
+              onTap: () => _onButtonTap(BouncingCardsPage()),
             ),
           ],
         ),
