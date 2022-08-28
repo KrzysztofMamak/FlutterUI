@@ -31,6 +31,7 @@ import 'package:flutter_samples/page_transition/page_transition_page.dart';
 import 'package:flutter_samples/parallax/parallax_page.dart';
 import 'package:flutter_samples/persistent_tab_bar/main_persistent_tab_bar.dart';
 import 'package:flutter_samples/rotate_widget/rotate_widget_page.dart';
+import 'package:flutter_samples/rotating_waves/rotating_waves_page.dart';
 import 'package:flutter_samples/screens/screens_page.dart';
 import 'package:flutter_samples/scroll_controller/main_scroll_controller.dart';
 import 'package:flutter_samples/shimmer_effect/shimmer_effect_page.dart';
@@ -238,6 +239,10 @@ class _MyAppState extends State<MyApp> {
             MyMenuButton(
               title: "Bouncing cards",
               onTap: () => _onButtonTap(BouncingCardsPage()),
+            ),
+            MyMenuButton(
+              title: "Rotating Waves",
+              onTap: () => _onButtonTap(RotatingWavesPage()),
             ),
           ],
         ),
