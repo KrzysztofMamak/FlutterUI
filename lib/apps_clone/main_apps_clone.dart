@@ -3,6 +3,7 @@ import 'package:flutter_samples/apps_clone/album_flow/album_flow_page.dart';
 import 'package:flutter_samples/apps_clone/android_messages/android_messages_page.dart';
 import 'package:flutter_samples/apps_clone/credit_cards_concept/credit_card_concept_page.dart';
 import 'package:flutter_samples/apps_clone/fitness_app/fitness_app_page.dart';
+import 'package:flutter_samples/apps_clone/gmail/gmail_main_page.dart';
 import 'package:flutter_samples/apps_clone/hotel_booking/hotel_booking_page.dart';
 import 'package:flutter_samples/apps_clone/movies_concept/movies_concept_page.dart';
 import 'package:flutter_samples/apps_clone/photo_concept/photo_concept_page.dart';
@@ -75,6 +76,10 @@ class _MainAppsCloneState extends State<MainAppsClone> {
             MyMenuButton(
               title: 'Fitness App',
               onTap: () => _onButtonTap(FitnessAppPage()),
+            ),
+            MyMenuButton(
+              title: 'Gmail',
+              onTap: () => _onButtonTap(GmailMainPage()),
             ),
           ],
         ),
