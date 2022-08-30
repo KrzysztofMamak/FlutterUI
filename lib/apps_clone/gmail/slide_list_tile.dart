@@ -22,8 +22,12 @@ class SlideListTile extends StatefulWidget {
 }
 
 class _SlideListTileState extends State<SlideListTile>
-    with SingleTickerProviderStateMixin {
-  late final AnimationController _animationController;
+    with TickerProviderStateMixin {
+  static const _iconSize = 16.0;
+
+  late final AnimationController _slideAnimationController;
+  late final AnimationController _iconAnimationController;
+  late final Animation<double> _iconAnimation;
 
   bool _isDragging = false;
   bool _isDraggingLeft = false;
@@ -34,26 +38,49 @@ class _SlideListTileState extends State<SlideListTile>
   @override
   void initState() {
     super.initState();
-    _animationController = AnimationController(
+    _slideAnimationController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 250),
+    );
+    _iconAnimationController = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 100),
+    )..addListener(() {
+        print('VALUE: ${_iconAnimation.value}');
+      });
+    // _iconAnimation = Tween<double>(
+    //   begin: 1,
+    //   end: 1.4,
+    // ).animate(_iconAnimationController);
+    _iconAnimation = CurvedAnimation(
+      parent: _iconAnimationController,
+      curve: Curves.easeInOutBack,
     );
   }
 
   @override
   void dispose() {
-    _animationController.dispose();
+    _slideAnimationController.dispose();
+    _iconAnimationController.dispose();
     super.dispose();
   }
 
-  Future<void> _animateToOriginalPosition() async {
+  Future<void> _animateTileToOriginalPosition() async {
     setState(() {
       _isAnimating = true;
     });
-    await _animationController.reverse(from: 1);
+    await _slideAnimationController.reverse(from: 1);
     setState(() {
       _isAnimating = false;
     });
+  }
+
+  Future<void> _animateIcon({bool reverse = false}) async {
+    if (reverse) {
+      await _iconAnimationController.reverse();
+    } else {
+      await _iconAnimationController.forward();
+    }
   }
 
   void _onHorizontalDragStart(DragStartDetails details) {
@@ -63,17 +90,34 @@ class _SlideListTileState extends State<SlideListTile>
   }
 
   void _onHorizontalDragUpdate(DragUpdateDetails details) {
+    final oldOffsetX = _offsetX;
+    final dx = details.delta.dx;
+
+    _isDraggingLeft = _offsetX < 0;
+    _isDraggingRight = !_isDraggingLeft;
+
+    if (oldOffsetX < 100 && oldOffsetX + dx >= 100 && _isDraggingRight) {
+      _animateIcon();
+    }
+    if (oldOffsetX > -100 && oldOffsetX + dx <= -100 && _isDraggingLeft) {
+      _animateIcon();
+    }
+    if (oldOffsetX > 100 && oldOffsetX + dx <= 100 && _isDraggingRight) {
+      _animateIcon(reverse: true);
+    }
+    if (oldOffsetX < -100 && oldOffsetX + dx >= -100 && _isDraggingLeft) {
+      _animateIcon(reverse: true);
+    }
     setState(() {
       _offsetX += details.delta.dx;
-      _isDraggingLeft = _offsetX < 0;
-      _isDraggingRight = !_isDraggingLeft;
     });
   }
 
   Future<void> _onHorizontalDragEnd(DragEndDetails details) async {
     _isDragging = false;
 
-    await _animateToOriginalPosition();
+    _animateIcon(reverse: true);
+    await _animateTileToOriginalPosition();
 
     setState(() {
       _isDraggingLeft = false;
@@ -90,29 +134,43 @@ class _SlideListTileState extends State<SlideListTile>
         ignoring: _isAnimating,
         child: Stack(
           children: [
-            Positioned(
-              top: 0,
-              bottom: 0,
-              right: 24,
-              child: const Icon(Icons.delete),
-            ),
-            Positioned(
-              top: 0,
-              bottom: 0,
-              left: 24,
-              child: const Icon(Icons.save_alt),
-            ),
+            if (_isDragging || _isAnimating)
+              Positioned(
+                top: 0,
+                bottom: 0,
+                left: _isDraggingRight ? 24 : null,
+                right: _isDraggingLeft ? 24 : null,
+                child: AnimatedBuilder(
+                  animation: _iconAnimation,
+                  builder: (context, child) {
+                    return Transform.scale(
+                      scale: 1 + _iconAnimation.value,
+                      child: Icon(
+                        _isDraggingRight ? Icons.delete : Icons.save,
+                        size: _iconSize,
+                      ),
+                    );
+                  },
+                ),
+                // child: ScaleTransition(
+                //   scale: _iconAnimation,
+                //   child: Icon(
+                //     _isDraggingRight ? Icons.delete : Icons.save,
+                //     size: _iconSize,
+                //   ),
+                // ),
+              ),
             GestureDetector(
               onHorizontalDragStart: _onHorizontalDragStart,
               onHorizontalDragUpdate: _onHorizontalDragUpdate,
               onHorizontalDragEnd: _onHorizontalDragEnd,
               child: AnimatedBuilder(
-                animation: _animationController,
+                animation: _slideAnimationController,
                 builder: (context, child) {
                   final offset = Offset(
                     _isDragging
                         ? _offsetX
-                        : _animationController.value * _offsetX,
+                        : _slideAnimationController.value * _offsetX,
                     0,
                   );
                   return Transform.translate(
