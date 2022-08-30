@@ -96,16 +96,16 @@ class _SlideListTileState extends State<SlideListTile>
     _isDraggingLeft = _offsetX < 0;
     _isDraggingRight = !_isDraggingLeft;
 
-    if (oldOffsetX < 100 && oldOffsetX + dx >= 100 && _isDraggingRight) {
+    if (oldOffsetX < 70 && oldOffsetX + dx >= 70 && _isDraggingRight) {
       _animateIcon();
     }
-    if (oldOffsetX > -100 && oldOffsetX + dx <= -100 && _isDraggingLeft) {
+    if (oldOffsetX > -70 && oldOffsetX + dx <= -70 && _isDraggingLeft) {
       _animateIcon();
     }
-    if (oldOffsetX > 100 && oldOffsetX + dx <= 100 && _isDraggingRight) {
+    if (oldOffsetX > 70 && oldOffsetX + dx <= 70 && _isDraggingRight) {
       _animateIcon(reverse: true);
     }
-    if (oldOffsetX < -100 && oldOffsetX + dx >= -100 && _isDraggingLeft) {
+    if (oldOffsetX < -70 && oldOffsetX + dx >= -70 && _isDraggingLeft) {
       _animateIcon(reverse: true);
     }
     setState(() {
