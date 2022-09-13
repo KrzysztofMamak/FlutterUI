@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_samples/amazing_hero_animations/amazing_hero_animations_page.dart';
 import 'package:flutter_samples/amazing_sidebar/amazing_sidebar_page.dart';
+import 'package:flutter_samples/animated_circle_avatar/animated_circle_avatar_page.dart';
 import 'package:flutter_samples/animated_list/animated_list_page.dart';
 import 'package:flutter_samples/animations/main_animations.dart';
 import 'package:flutter_samples/appbar_sliverappbar/main_appbar_sliverappbar.dart';
@@ -243,6 +244,10 @@ class _MyAppState extends State<MyApp> {
             MyMenuButton(
               title: "Rotating Waves",
               onTap: () => _onButtonTap(RotatingWavesPage()),
+            ),
+            MyMenuButton(
+              title: "Animated Circle Avatar",
+              onTap: () => _onButtonTap(AnimatedCircleAvatarPage()),
             ),
           ],
         ),
